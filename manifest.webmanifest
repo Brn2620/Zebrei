@@ -1,0 +1,30 @@
+{
+ "name": "Zebrei · Simulador do Brasileirão",
+ "short_name": "Zebrei",
+ "lang": "pt-BR",
+ "description": "Assuma seu clube no Brasileirão 2026 e jogue as rodadas que faltam: escale o time real, mexa no intervalo, bata os pênaltis e apronte zebras. Título, G4 ou fuga do Z4?",
+ "start_url": "./",
+ "scope": "./",
+ "display": "standalone",
+ "orientation": "any",
+ "background_color": "#0A1626",
+ "theme_color": "#0A1626",
+ "icons": [
+  {
+   "src": "icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  },
+  {
+   "src": "icon-maskable-512.png",
+   "sizes": "512x512",
+   "type": "image/png",
+   "purpose": "maskable"
+  }
+ ]
+}
