@@ -50,6 +50,32 @@
 .howto li b{display:block;color:var(--chalk);font-size:14px;margin-bottom:3px}
 .pick-h{margin-top:4px}
 @media (max-width:640px){.howto{grid-template-columns:1fr;gap:6px}.howto li{padding:8px 10px}}
+.lv{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:2px 0 16px}
+.lv button{display:grid;gap:3px;text-align:left;background:var(--deep);border:2px solid var(--line);border-radius:12px;padding:10px 12px;cursor:pointer;color:var(--chalk);font:inherit}
+.lv button b{font-family:var(--f-display);font-weight:800;font-size:20px;letter-spacing:.03em;text-transform:uppercase}
+.lv button span{font-size:13px;color:var(--muted);line-height:1.35}
+.lv button[aria-checked="true"]{border-color:var(--amber);background:rgba(255,176,32,.08)}
+.lv button[aria-checked="true"] b{color:var(--amber)}
+.lv button:focus-visible{outline:2px solid var(--chalk);outline-offset:2px}
+@media (max-width:640px){.lv{grid-template-columns:1fr}}
+/* níveis: o que some em cada um */
+.lv-simple #locker>.locker-top,.lv-simple #locker>.meter,.lv-simple #locker>.plan,.lv-simple #pitch,.lv-simple .lineup-note,.lv-simple #alerts,.lv-simple .bench-d{display:none!important}
+.lv-simple #btnStop,.lv-mid #btnStop{display:none!important}
+.lv-mid .instr-row,.lv-mid #htInstrWrap{display:none!important}
+.simple-box{display:none;gap:12px;margin:4px 0 12px}
+.lv-simple .simple-box{display:grid}
+.sb-next{display:grid;gap:4px;background:var(--deep);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.sb-next>b{font-size:18px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.sb-next>span{color:var(--muted);font-size:14px}.sb-next>span b{color:var(--chalk)}
+.sb-opts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.sb-opts button{display:grid;gap:2px;justify-items:center;text-align:center;background:var(--panel);border:2px solid var(--line);border-radius:12px;padding:12px 8px;cursor:pointer;color:var(--chalk);font:inherit}
+.sb-opts .e{font-size:26px;line-height:1}.sb-opts b{font-family:var(--f-display);font-weight:800;font-size:19px;text-transform:uppercase;letter-spacing:.03em}
+.sb-opts small{color:var(--muted);font-size:12px;line-height:1.3}
+.sb-opts button[aria-pressed="true"]{border-color:var(--amber);background:rgba(255,176,32,.1)}
+.sb-luck{display:flex;align-items:center;gap:8px;flex-wrap:wrap;text-align:left;background:var(--deep);border:2px dashed var(--line);border-radius:12px;padding:10px 14px;cursor:pointer;color:var(--chalk);font:inherit}
+.sb-luck span{color:var(--muted);font-size:13.5px}
+.sb-luck[aria-pressed="true"]{border-style:solid;border-color:var(--sula);background:rgba(43,182,115,.1)}
+.sb-luck:disabled{opacity:.5;cursor:default}
 .daily-box{background:rgba(255,176,32,.1);border:1px solid var(--amberDim);border-radius:10px;padding:10px 12px;margin-bottom:12px;font-size:14px}
 .daily-box>span{display:block;color:var(--muted);font-size:12.5px;margin-top:4px}
 .feat-line{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.feat-line .dot{flex:0 0 auto}
@@ -414,6 +440,13 @@ footer{color:var(--muted);font-size:12px;margin-top:18px;max-width:90ch}
         <div id="locker">
           <div class="card-head"><h2 id="lockerTitle">Vestiário</h2><span class="pill" id="lockerPill">próximo jogo</span></div>
           <div class="coach-line" id="coachLine"></div>
+          <div class="simple-box" id="simpleBox">
+            <div class="sb-next" id="sbNext"></div>
+            <span class="ctl-label">Como o time entra em campo?</span>
+            <div class="sb-opts" id="sbOpts" role="group" aria-label="Postura do time"></div>
+            <button type="button" class="sb-luck" id="sbLuck" aria-pressed="false"></button>
+            <p class="note" id="sbNote" style="margin:0"></p>
+          </div>
           <div class="locker-top">
             <select id="formation" aria-label="Formação"></select>
             <select id="styleSel" aria-label="Estilo de jogo"></select>
@@ -421,14 +454,14 @@ footer{color:var(--muted);font-size:12px;margin-top:18px;max-width:90ch}
           </div>
           <div class="meter"><div class="lbl"><span>Força do time</span><b id="xiPower">—</b></div><div class="track"><i id="xiBar"></i></div></div>
           <div class="plan">
-            <div class="plan-row"><span class="ctl-label">Instruções · até 3</span><div class="chips" id="instr"></div></div>
+            <div class="plan-row instr-row"><span class="ctl-label">Instruções · até 3</span><div class="chips" id="instr"></div></div>
             <div class="plan-row"><span class="ctl-label">Preleção antes do jogo</span>
               <div class="chips" id="talk" role="group" aria-label="Preleção"></div><p class="note" id="talkNote" style="margin:0"></p></div>
             <div class="meter"><div class="lbl"><span>Moral do elenco</span><b id="moralTxt">—</b></div><div class="track"><i id="moralBar"></i></div></div>
             <div class="impact" id="impact"></div>
           </div>
           <div class="lineup-field" id="pitch"></div>
-          <p class="note">Arraste um jogador para mudar a posição dele: a função (zagueiro, lateral, meia, atacante) muda conforme a área do campo. Toque nele para trocar por outro do elenco.</p>
+          <p class="note lineup-note">Arraste um jogador para mudar a posição dele: a função (zagueiro, lateral, meia, atacante) muda conforme a área do campo. Toque nele para trocar por outro do elenco.</p>
           <div class="alerts" id="alerts"></div>
           <details class="bench-d"><summary>Banco e desfalques</summary><div class="bench" id="bench"></div></details>
         </div>
@@ -483,6 +516,12 @@ footer{color:var(--muted);font-size:12px;margin-top:18px;max-width:90ch}
       <li><b>2 · Jogue ao vivo</b>Veja seu jogo no campo, mexa no intervalo, faça substituições e decida pênaltis e faltas.</li>
       <li><b>3 · Apronte zebras</b>Os outros 19 times jogam sozinhos, conforme o momento de cada elenco. Venceu quem tinha pouca chance? ZEBREI!</li>
     </ol>
+    <h2 class="pick-h">Como você quer jogar?</h2>
+    <div class="lv" role="radiogroup" aria-label="Nível de jogo" id="lvSeg">
+      <button type="button" role="radio" data-lv="simple"><b>Simples</b><span>Escolhe o time e torce. Uma decisão por jogo e 3 amuletos da sorte.</span></button>
+      <button type="button" role="radio" data-lv="mid"><b>Intermediário</b><span>Formação, estilo, preleção, substituições e pênaltis.</span></button>
+      <button type="button" role="radio" data-lv="adv"><b>Avançado</b><span>Tudo: jogadores no campo, instruções, faltas e paradas técnicas.</span></button>
+    </div>
     <h2 class="pick-h">Escolha seu clube</h2>
     <p class="sub" id="pickSub">Você assume o time com a campanha real até aqui. Escala, escolhe o estilo e decide os lances. Os outros 19 jogam no automático.</p>
     <div class="daily-box" id="dailyBox" hidden></div>
@@ -507,7 +546,7 @@ footer{color:var(--muted);font-size:12px;margin-top:18px;max-width:90ch}
           <div class="subs-done" id="htSubsDone"></div>
           <div class="field" style="margin-top:8px"><span class="ctl-label">Estilo</span></div>
           <div class="chips" id="htStyle" role="group" aria-label="Estilo"></div>
-          <span class="ctl-label" style="margin-top:6px">Instruções · até 3</span><div class="chips" id="htInstr"></div>
+          <div id="htInstrWrap"><span class="ctl-label" style="margin-top:6px">Instruções · até 3</span><div class="chips" id="htInstr"></div></div>
           <p class="note" id="htNote"></p>
         </div>
       </div>
@@ -742,7 +781,7 @@ function setupCoach(id){
   const fullFit=sq.filter(avail).map(p=>Object.assign({},p,{sta:100}));
   let best=-1,bf="4-3-3";
   const byK={};fullFit.forEach(p=>byK[p.k]=p);for(const f in FORMS){const xi=bestXI(f,fullFit);const v=xi.reduce((s,k,i)=>s+eff(k>=0?byK[k]:null,FORMS[f][i]),0)/11;if(v>best){best=v;bf=f;}}
-  const ppg=T[id].P/T[id].J;state.coach={team:id,form:bf,pos:PRESETS[bf].map(q=>q.slice()),style:"bal",xi:[],base:best,matchStyle:null,mins:{},subsLeft:5,red:0,instr:[],talk:"mot",moral:Math.max(25,Math.min(85,30+20*ppg)),stops:3,zebras:0};
+  const ppg=T[id].P/T[id].J;state.coach={team:id,form:bf,pos:PRESETS[bf].map(q=>q.slice()),style:"bal",xi:[],base:best,matchStyle:null,mins:{},subsLeft:5,red:0,lucky:3,luckyNext:false,instr:[],talk:"mot",moral:Math.max(25,Math.min(85,30+20*ppg)),stops:3,zebras:0};
   state.coach.xi=bestXI(bf,sq.filter(avail));
 }
 function coachMult(){const c=state.coach;return Math.exp((xiValue(c)/c.base-1)*4);}
@@ -784,6 +823,7 @@ function buildMatch(code,i,round,chaos){
   const c=state.coach;
   if(c&&(h===c.team||a===c.team)){
     m.mine=true;c.matchStyle=c.style;c.red=0;c.subsLeft=5;c.stops=3;c.mins={};c.xi.forEach(k=>{if(k>=0)c.mins[k]={from:0,to:null}});
+    if(c.luckyNext&&(c.lucky??3)>0){m.lucky=true;c.lucky=(c.lucky??3)-1;c.luckyNext=false;feed("🍀",`Amuleto da sorte ativado! ${c.lucky} restante${c.lucky===1?"":"s"} na temporada.`,"mine");}
     const [lh,la]=mineLambdas(m,chaos);m.p=probs(lh,la);m.ev=[];
   }else{
     const [lh,la]=lambdas(h,a,chaos);m.p=probs(lh,la);genGoals(m,lh,la,1,90,stop);
@@ -895,6 +935,7 @@ function computeFX(m){
     if(k==="cera"){const lead=m&&m.mine&&(m.h===c.team?m.gh-m.ga:m.ga-m.gh)>0;add(INSTR[k].n+(lead?" (ganhando)":" (sem vantagem)"),lead?.88:.9,lead?.82:.97);cards*=1.2;}
   });
   if(c.red)add("Jogador expulso",.8,1.25);
+  if(m&&(m.lucky||(c.luckyNext&&!m.started)))add("🍀 Amuleto da sorte",1.15,.88);
   return {a,d,fat,cards,parts};
 }
 function nextMatchOf(){const r=ROUNDS[state.round],c=state.coach;if(!r||!c)return null;const g=r.g.find(x=>x.split("-").includes(c.team));if(!g)return null;const[h,a]=g.split("-");return{h,a,mine:true}}
@@ -997,7 +1038,11 @@ function fkSVG(s,attackingUp){const S=3,W=204,H=118,cx=W/2,gy=8,bx=cx+s.off*S,by
   <circle cx="${bx}" cy="${by}" r="4" fill="#fff" stroke="#111"/></svg>`;}
 function pvSpot(m,attSide,s){if(state.live.matches[PV.idx]!==m)return;const x=attSide==="h"?1-s.dist/105:s.dist/105,y=.5+(attSide==="h"?1:-1)*s.off/68;
   const b=PV.ball;b.x=b.fx=b.tx=x;b.y=b.fy=b.ty=Math.max(.05,Math.min(.95,y));b.dur=1;}
+let decQueue=[];
 function openDecision(ey,title,sub,opts,cb,viz){
+  const mode=decQueue.length?decQueue.shift():null;
+  if(mode){let i=0;if(mode!=="first"){const ps=opts.map(o=>parseInt(o.v)||0);i=ps.indexOf(mode==="best"?Math.max(...ps):Math.min(...ps));if(i<0)i=0;}
+    $("decModal").hidden=true;feed("🤖",`${esc(ey)}: ${esc(opts[i].t)}${opts[i].v?" ("+esc(opts[i].v)+")":""}`,"mine");setTimeout(()=>cb(i),450/Math.max(1,speed*.6));return;}
   $("decViz").hidden=!viz;$("decViz").innerHTML=viz||"";
   $("decEy").textContent=ey;$("decTitle").textContent=title;$("decSub").textContent=sub;
   $("decOpts").innerHTML=opts.map((o,i)=>`<button class="dec-opt" data-i="${i}"><b>${esc(o.t)}</b>${o.v?`<span>${esc(o.v)}</span>`:""}${o.s?`<small>${esc(o.s)}</small>`:""}</button>`).join("");
@@ -1026,6 +1071,7 @@ function scoreAndShow(m,side,label,min,p){const who=doGoal(m,side,label,min,p,tr
 function handlePause(pz,resume){
   const m=pz.m,c=state.coach,sq=state.sq[c.team],my=m.h===c.team?"h":"a",op=my==="h"?"a":"h",opp=my==="h"?m.a:m.h;
   const min=parseInt(pz.label)||m.mi;const done=()=>{pvHud();setTimeout(resume,700/Math.max(1,speed*.6));};
+  decQueue=LEVEL==="adv"?[]:pz.type==="penFor"?(LEVEL==="simple"?["first",null]:[]):pz.type==="fkFor"?["first","best"]:pz.type==="fkAg"?["min"]:[];
   const field=c.xi.filter(k=>k>=0).map(k=>sq[k]).filter(p=>p.pos!=="GOL");
   htResume=true;
   if(pz.type==="penFor"){
@@ -1236,6 +1282,26 @@ function leds(){
 // Vestiário
 function staColor(s){return s>75?"var(--sula)":s>50?"var(--amber)":"var(--z4)"}
 function statusTxt(p){if(p.out>0)return p.why==="sus"?`🟥 suspenso (${p.out})`:`🩹 lesionado (${p.out})`;if(p.yc===2)return"🟨🟨 pendurado";return"";}
+let LEVEL="simple";try{LEVEL=localStorage.getItem("zb-level")||"simple"}catch(e){}
+if(!["simple","mid","adv"].includes(LEVEL))LEVEL="simple";
+function applyLevel(){document.body.classList.remove("lv-simple","lv-mid","lv-adv");document.body.classList.add("lv-"+LEVEL);
+  document.querySelectorAll("#lvSeg button").forEach(b=>b.setAttribute("aria-checked",String(b.dataset.lv===LEVEL)));
+  $("tabLineup").textContent=LEVEL==="simple"?"Seu time":"Escalação";}
+document.querySelectorAll("#lvSeg button").forEach(b=>b.onclick=()=>{LEVEL=b.dataset.lv;try{localStorage.setItem("zb-level",LEVEL)}catch(e){}applyLevel();sfx("click");if(state&&state.coach)renderLocker();stopBtn();});
+const SIMPLE_OPTS=[{k:"off",e:"🔥",t:"Pra cima",d:"Mais gols a favor e contra"},{k:"bal",e:"⚖️",t:"Equilibrado",d:"Sem correr riscos"},{k:"def",e:"🛡️",t:"Fechadinho",d:"Segura atrás e sai no contra-ataque"}];
+function renderSimple(){const c=state.coach;if(!c||LEVEL!=="simple")return;
+  if(!["off","bal","def"].includes(c.style))c.style="bal";
+  if(!state.live){c.xi=bestXI(slotsOf(c),state.sq[c.team].filter(avail));c.instr=[];}
+  const nm=nextMatchOf();
+  if(nm){const[lh,la]=mineLambdas(nm,false);const p=probs(lh,la);const home=nm.h===c.team,opp=home?nm.a:nm.h,w=home?p[0]:p[2],l=home?p[2]:p[0];
+    $("sbNext").innerHTML=`<span class="eyebrow">Próximo jogo · ${home?"em casa":"fora"}</span><b>${dot(c.team)}${T[c.team].name} × ${T[opp].name}${dot(opp)}</b><span>Chance de vitória <b>${pc(w)}</b> · empate ${pc(p[1])} · derrota ${pc(l)}</span>`;}
+  else $("sbNext").innerHTML=`<b>${state.round>=ROUNDS.length?"Temporada encerrada":"Seu time folga nesta rodada"}</b>`;
+  $("sbOpts").innerHTML=SIMPLE_OPTS.map(o=>`<button type="button" data-k="${o.k}" aria-pressed="${c.style===o.k}"><span class="e">${o.e}</span><b>${o.t}</b><small>${o.d}</small></button>`).join("");
+  $("sbOpts").querySelectorAll("button").forEach(b=>b.onclick=()=>{c.style=b.dataset.k;sfx("click");renderLocker();});
+  const L=c.lucky??3,lb=$("sbLuck");lb.setAttribute("aria-pressed",String(!!c.luckyNext));lb.disabled=L<=0&&!c.luckyNext;
+  lb.innerHTML=`🍀 <b>Amuleto da sorte</b><span>${c.luckyNext?"ativado para este jogo · toque para guardar":L>0?`usar neste jogo · ${L} de 3 na temporada`:"os 3 amuletos já foram usados"}</span>`;
+  lb.onclick=()=>{if(!c.luckyNext&&(c.lucky??3)<=0)return;c.luckyNext=!c.luckyNext;sfx("click");renderLocker();};
+  $("sbNote").textContent="Escalação, substituições e faltas ficam no automático. Nos pênaltis, você escolhe o canto.";}
 function renderLocker(){
   const c=state.coach;$("tabLineup").hidden=!c;if(!c){if(curTab==="lineup")showTab("table");return;}
   const sq=state.sq[c.team],slots=slotsOf(c);
@@ -1243,7 +1309,9 @@ function renderLocker(){
   const nextR=ROUNDS[state.round];let opp="";if(nextR){const g=nextR.g.find(x=>x.split("-").includes(c.team));if(g){const[h,a]=g.split("-");opp=h===c.team?`${T[a].name} em casa`:`${T[h].name} fora`;}}
   $("lockerPill").textContent=nextR?(opp?"próximo: "+opp:"folga nesta rodada"):"temporada encerrada";
   const coachName=DATA.coach[c.team];
-  $("coachLine").innerHTML=coachName?`Você assumiu o lugar de <b>${esc(coachName)}</b>. ${state.results.length?"":"Monte o time e aperte Jogar rodada."}`:`Você é o técnico. Monte o time e aperte Jogar rodada.`;
+  const how=LEVEL==="simple"?"Escolha como o time entra e aperte Jogar rodada.":"Monte o time e aperte Jogar rodada.";
+  $("coachLine").innerHTML=coachName?`Você assumiu o lugar de <b>${esc(coachName)}</b>. ${state.results.length?"":how}`:`Você é o técnico. ${how}`;
+  renderSimple();
   $("formation").innerHTML=Object.keys(PRESETS).map(f=>`<option ${f===c.form?"selected":""}>${f}</option>`).join("")+(c.form==="Personalizada"?`<option selected disabled>Personalizada</option>`:"");
   $("styleSel").innerHTML=Object.keys(STYLE).map(k=>`<option value="${k}" ${k===c.style?"selected":""}>${STYLE[k].n}</option>`).join("");
   const used=new Set(c.xi);
@@ -1328,7 +1396,8 @@ function startRound(instant){
   if(busy||state.round>=ROUNDS.length)return;
   const r=ROUNDS[state.round];
   if(state.coach&&myMatchOf(r)>=0){
-    if(instant){const c=state.coach;c.xi=bestXI(slotsOf(c),state.sq[c.team].filter(avail));}
+    const c0=state.coach;if(LEVEL!=="adv")c0.instr=[];
+    if(instant||LEVEL==="simple"||(LEVEL==="mid"&&lineupProblems().length)){c0.xi=bestXI(slotsOf(c0),state.sq[c0.team].filter(avail));}
     else{const pr=lineupProblems();if(pr.length){toast("Ajuste a escalação",true);feed("⚠",pr.join(" "),"bad");showTab("lineup");$("pane-lineup").scrollIntoView({behavior:"smooth",block:"start"});return;}}
   }
   busy=true;setButtons();
@@ -1437,7 +1506,11 @@ function fmt(s,m){return s.replace("{h}",T[m.h].name).replace("{a}",T[m.a].name)
 // Intervalo
 let htMatch=null,htResume=null,htResumeFn=null;
 let htMin=45,htKindV="ht",pauseLabel="INTERVALO";
+function autoTiredSubs(min){const c=state.coach,sq=state.sq[c.team];let n=0;
+  c.xi.map((k,i)=>[k,i]).filter(([k])=>k>=0&&sq[k].pos!=="GOL"&&sq[k].sta<62).sort((a,b)=>sq[a[0]].sta-sq[b[0]].sta).slice(0,3).forEach(([k])=>{if(c.subsLeft<=0)return;const out=sq[k];const rep=autoSub(k,min+"'");if(rep){n++;feed(min+"'",`🔁 Sai ${esc(out.n)} (cansado), entra ${esc(rep.n)}.`,"mine");}});return n;}
 function tactical(m,min,kind,resume){
+  if(LEVEL==="simple"){htMatch=m;htResume=true;htResumeFn=resume;htMin=min;htKindV=kind;state.coach.stopSubs=[];
+    if(kind==="ht")feed("45'","Intervalo. O time volta com as trocas automáticas.","mine");autoTiredSubs(min);htProceed();return;}
   htMatch=m;htResume=true;htResumeFn=resume;htMin=min;htKindV=kind;pauseLabel=kind==="ht"?"INTERVALO":"PARADA TÉCNICA";const c=state.coach;c.stopSubs=[];
   if(kind==="ht"){feed("45'","Intervalo. Hora de falar no vestiário.","mine");sfx("half");}
   else{feed(min+"'","⏸ Parada técnica: o técnico chama o time na beira do campo.","mine");sfx("half");}
@@ -1483,10 +1556,11 @@ $("htDoSub").onclick=()=>{const c=state.coach,sq=state.sq[c.team],i=+$("htOut").
   const old=c.xi[i];if(old>=0&&c.mins[old])c.mins[old].to=htMin;c.xi[i]=k;c.mins[k]={from:htMin,to:null};c.subsLeft--;c.stopSubs.push({i,old,neu:k});
   feed(htMin+"'",`🔁 Sai ${old>=0?esc(sq[old].n):"—"}, entra ${esc(sq[k].n)}.`,"mine");renderHT();};
 
-$("htGo").onclick=()=>{$("htModal").hidden=true;htResume=null;state.coach.stopSubs=[];regenMine(htMatch,htMin);pvBuildPlayers();sfx("start");ambience(true);
+function htProceed(){$("htModal").hidden=true;htResume=null;state.coach.stopSubs=[];regenMine(htMatch,htMin);pvBuildPlayers();sfx("start");ambience(true);
   if(htKindV==="ht"){feed("46'","Rola a bola para o segundo tempo.","mine");tickMinute(46);}
   else{state.coach.stops--;feed(htMin+"'","O jogo recomeça com as mudanças.","mine");}
-  stopBtn();const r=htResumeFn;htResumeFn=null;r&&r();};
+  stopBtn();const r=htResumeFn;htResumeFn=null;r&&r();}
+$("htGo").onclick=htProceed;
 function stopBtn(){const c=state.coach,b=$("btnStop");const mine=state.live&&state.live.matches.find(m=>m.mine);
   b.hidden=!(mine&&!mine.done&&!state.live.instant);if(c){$("stopsLeft").textContent=`(${c.stops})`;b.disabled=c.stops<=0;}}
 $("btnStop").onclick=()=>{if(!state.live||htResume)return;state.live.wantStop=true;$("btnStop").disabled=true;toast("Parada no próximo lance");};
@@ -1972,7 +2046,7 @@ function start(){
   pvResize();window.addEventListener("resize",()=>{pvResize()});requestAnimationFrame(pvDraw);pvPreview();
   let saved="";try{saved=localStorage.getItem("rf26-team")||""}catch(e){}
   openPicker();
-  renderRealTag();connectReal();
+  renderRealTag();connectReal();applyLevel();
 }
 start();
 })();
