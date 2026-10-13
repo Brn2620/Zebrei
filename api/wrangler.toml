@@ -1,0 +1,16 @@
+name = "zebrei-api"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+[[routes]]
+pattern = "api.zebrei.com"
+custom_domain = true
+
+[[durable_objects.bindings]]
+name = "RANKING"
+class_name = "Ranking"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Ranking"]
