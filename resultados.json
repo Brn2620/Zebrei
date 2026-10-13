@@ -170,5 +170,27 @@
    "Camutanga",
    "Kauan"
   ]
+ },
+ "tecnicos": {
+  "BAH": "Rogério Ceni",
+  "BOT": "Tite",
+  "CAM": "Eduardo Domínguez",
+  "CAP": "Odair Hellmann",
+  "CFC": "Fernando Seabra",
+  "CHA": "Rafael Lacerda",
+  "COR": "Clarence Seedorf",
+  "CRU": "Artur Jorge",
+  "FLA": "Leonardo Jardim",
+  "FLU": "Marcão",
+  "GRE": "Renato Gaúcho",
+  "INT": "Eduardo Baptista",
+  "MIR": "Rafael Guanaes",
+  "PAL": "Abel Ferreira",
+  "RBB": "Vagner Mancini",
+  "REM": "Thiago Carpini",
+  "SAN": "Cuca",
+  "SAO": "Dorival Júnior",
+  "VAS": "Pedro Emanuel",
+  "VIT": "Jair Ventura"
  }
 }
