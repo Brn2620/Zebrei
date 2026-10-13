@@ -1,4 +1,174 @@
 {
- "atualizado": "",
- "jogos": {}
+ "atualizado": "13/10/2026",
+ "jogos": {
+  "BAH-MIR": {
+   "gh": 1,
+   "ga": 0,
+   "data": "11/10"
+  },
+  "CAM-SAN": {
+   "gh": 2,
+   "ga": 1,
+   "data": "11/10"
+  },
+  "CFC-BOT": {
+   "gh": 1,
+   "ga": 1,
+   "data": "12/10"
+  },
+  "CHA-CAP": {
+   "gh": 1,
+   "ga": 4,
+   "data": "12/10"
+  },
+  "FLA-FLU": {
+   "gh": 1,
+   "ga": 0,
+   "data": "11/10"
+  },
+  "GRE-INT": {
+   "gh": 1,
+   "ga": 1,
+   "data": "11/10"
+  },
+  "PAL-COR": {
+   "gh": 4,
+   "ga": 1,
+   "data": "11/10"
+  },
+  "RBB-CRU": {
+   "gh": 4,
+   "ga": 2,
+   "data": "12/10"
+  },
+  "SAO-VIT": {
+   "gh": 2,
+   "ga": 1,
+   "data": "10/10"
+  },
+  "VAS-REM": {
+   "gh": 0,
+   "ga": 0,
+   "data": "10/10"
+  }
+ },
+ "desfalques": {
+  "BAH": [
+   "Léo Vieira"
+  ],
+  "BOT": [
+   "Edenílson",
+   "Jordan Barrera",
+   "Kaio Pantaleão",
+   "Arthur Chaves",
+   "Lucas Monzón"
+  ],
+  "CAM": [
+   "Gustavo Scarpa",
+   "Everson",
+   "Ruan Tressoldi",
+   "Cassierra",
+   "Fred",
+   "Alan Franco|suspenso"
+  ],
+  "CAP": [
+   "Benavídez",
+   "Kerwin Vargas",
+   "Dantas",
+   "Carlos Terán"
+  ],
+  "CFC": [
+   "Bruno Melo|suspenso"
+  ],
+  "CHA": [
+   "Marcinho|suspenso",
+   "Heitor",
+   "Balieiro",
+   "Rafael Carvalheira",
+   "Max",
+   "Robert"
+  ],
+  "COR": [
+   "Memphis Depay|suspenso",
+   "Kayke",
+   "Labyad"
+  ],
+  "CRU": [
+   "Felipe Morais|suspenso",
+   "Gabriel Pec",
+   "Sinisterra",
+   "Lucas Romero"
+  ],
+  "FLA": [
+   "Arrascaeta",
+   "Ayrton Lucas",
+   "Evertton Araújo",
+   "Danilo"
+  ],
+  "FLU": [
+   "Guilherme Arana|suspenso",
+   "Germán Cano",
+   "John Kennedy",
+   "Matheus Reis",
+   "Alisson",
+   "Riquelme Felipe"
+  ],
+  "GRE": [
+   "Wallace|suspenso",
+   "Jovane Cabral"
+  ],
+  "INT": [
+   "Alan Patrick",
+   "Rochet",
+   "Sanabria",
+   "Allex",
+   "Maripán"
+  ],
+  "MIR": [
+   "Negueba",
+   "Aldo Filho"
+  ],
+  "PAL": [
+   "Gustavo Gómez|suspenso",
+   "Giay|suspenso",
+   "Jefté"
+  ],
+  "RBB": [
+   "Davi Gomes",
+   "Rodriguinho",
+   "Henry Mosquera"
+  ],
+  "REM": [
+   "Marcelo Rangel|suspenso",
+   "Tchamba",
+   "Matheus Felipe"
+  ],
+  "SAN": [
+   "Willian Arão|suspenso",
+   "Arthur",
+   "Gabriel Brazão",
+   "Vinícius Lira"
+  ],
+  "SAO": [
+   "Djhordney|suspenso",
+   "Luciano",
+   "Ferreira",
+   "Nicolas",
+   "Aurélio Buta",
+   "Domingos Duarte",
+   "Danielzinho"
+  ],
+  "VAS": [],
+  "VIT": [
+   "Cacá|suspenso",
+   "Baralhas",
+   "Ramon",
+   "Nathan Mendes",
+   "Fabiano Souza",
+   "Dudu",
+   "Edu",
+   "Camutanga",
+   "Kauan"
+  ]
+ }
 }
