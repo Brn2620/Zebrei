@@ -76,6 +76,15 @@
 .sb-luck span{color:var(--muted);font-size:13.5px}
 .sb-luck[aria-pressed="true"]{border-style:solid;border-color:var(--sula);background:rgba(43,182,115,.1)}
 .sb-luck:disabled{opacity:.5;cursor:default}
+.cta-play{width:100%;justify-content:center;font-size:20px;padding:14px 18px;margin-top:14px}
+.pre-hint{margin:10px 0 0;font-size:14px}
+.sb-star{display:grid;gap:8px;background:var(--deep);border:1px dashed var(--line);border-radius:12px;padding:10px 12px}
+.ss-h{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}.ss-h span{color:var(--muted);font-size:13px}
+.ss-o{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.ss-o button{display:grid;gap:2px;text-align:center;background:var(--panel);border:2px solid var(--line);border-radius:10px;padding:8px 6px;cursor:pointer;color:var(--chalk);font:inherit;min-width:0}
+.ss-o button b{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ss-o button small{color:var(--muted);font-size:11.5px}
+.ss-o button[aria-pressed="true"]{border-color:var(--amber);background:rgba(255,176,32,.12)}
+.ss-o button:disabled{opacity:.45;cursor:default}
 .daily-box{background:rgba(255,176,32,.1);border:1px solid var(--amberDim);border-radius:10px;padding:10px 12px;margin-bottom:12px;font-size:14px}
 .daily-box>span{display:block;color:var(--muted);font-size:12.5px;margin-top:4px}
 .feat-line{display:flex;flex-wrap:wrap;align-items:center;gap:6px}.feat-line .dot{flex:0 0 auto}
@@ -422,6 +431,7 @@ footer{color:var(--muted);font-size:12px;margin-top:18px;max-width:90ch}
           </div>
           <label class="toggle" for="chaos" title="Resultados mais imprevisíveis"><input type="checkbox" id="chaos"> <span>Modo zebra</span></label>
         </div>
+        <p class="pre-hint" id="preHint" hidden><button class="linkish" id="goLocker" type="button">⚙ Ajustar o time antes de jogar ↓</button></p>
       </section>
       <div class="sponsor" id="sponsor" aria-hidden="true"></div>
     </div>
@@ -444,7 +454,7 @@ footer{color:var(--muted);font-size:12px;margin-top:18px;max-width:90ch}
             <div class="sb-next" id="sbNext"></div>
             <span class="ctl-label">Como o time entra em campo?</span>
             <div class="sb-opts" id="sbOpts" role="group" aria-label="Postura do time"></div>
-            <button type="button" class="sb-luck" id="sbLuck" aria-pressed="false"></button>
+            <div class="sb-star" id="sbStar"></div>
             <p class="note" id="sbNote" style="margin:0"></p>
           </div>
           <div class="locker-top">
@@ -464,6 +474,7 @@ footer{color:var(--muted);font-size:12px;margin-top:18px;max-width:90ch}
           <p class="note lineup-note">Arraste um jogador para mudar a posição dele: a função (zagueiro, lateral, meia, atacante) muda conforme a área do campo. Toque nele para trocar por outro do elenco.</p>
           <div class="alerts" id="alerts"></div>
           <details class="bench-d"><summary>Banco e desfalques</summary><div class="bench" id="bench"></div></details>
+          <button class="btn primary cta-play" id="btnRound2" type="button">▶ Jogar rodada</button>
         </div>
       </div>
 
@@ -518,7 +529,7 @@ footer{color:var(--muted);font-size:12px;margin-top:18px;max-width:90ch}
     </ol>
     <h2 class="pick-h">Como você quer jogar?</h2>
     <div class="lv" role="radiogroup" aria-label="Nível de jogo" id="lvSeg">
-      <button type="button" role="radio" data-lv="simple"><b>Simples</b><span>Escolhe o time e torce. Uma decisão por jogo e 3 amuletos da sorte.</span></button>
+      <button type="button" role="radio" data-lv="simple"><b>Simples</b><span>Escolhe o time e torce. Uma decisão por jogo e 3 noites do craque.</span></button>
       <button type="button" role="radio" data-lv="mid"><b>Intermediário</b><span>Formação, estilo, preleção, substituições e pênaltis.</span></button>
       <button type="button" role="radio" data-lv="adv"><b>Avançado</b><span>Tudo: jogadores no campo, instruções, faltas e paradas técnicas.</span></button>
     </div>
@@ -781,7 +792,7 @@ function setupCoach(id){
   const fullFit=sq.filter(avail).map(p=>Object.assign({},p,{sta:100}));
   let best=-1,bf="4-3-3";
   const byK={};fullFit.forEach(p=>byK[p.k]=p);for(const f in FORMS){const xi=bestXI(f,fullFit);const v=xi.reduce((s,k,i)=>s+eff(k>=0?byK[k]:null,FORMS[f][i]),0)/11;if(v>best){best=v;bf=f;}}
-  const ppg=T[id].P/T[id].J;state.coach={team:id,form:bf,pos:PRESETS[bf].map(q=>q.slice()),style:"bal",xi:[],base:best,matchStyle:null,mins:{},subsLeft:5,red:0,lucky:3,luckyNext:false,instr:[],talk:"mot",moral:Math.max(25,Math.min(85,30+20*ppg)),stops:3,zebras:0};
+  const ppg=T[id].P/T[id].J;state.coach={team:id,form:bf,pos:PRESETS[bf].map(q=>q.slice()),style:"bal",xi:[],base:best,matchStyle:null,mins:{},subsLeft:5,red:0,stars:3,starNext:-1,instr:[],talk:"mot",moral:Math.max(25,Math.min(85,30+20*ppg)),stops:3,zebras:0};
   state.coach.xi=bestXI(bf,sq.filter(avail));
 }
 function coachMult(){const c=state.coach;return Math.exp((xiValue(c)/c.base-1)*4);}
@@ -823,7 +834,8 @@ function buildMatch(code,i,round,chaos){
   const c=state.coach;
   if(c&&(h===c.team||a===c.team)){
     m.mine=true;c.matchStyle=c.style;c.red=0;c.subsLeft=5;c.stops=3;c.mins={};c.xi.forEach(k=>{if(k>=0)c.mins[k]={from:0,to:null}});
-    if(c.luckyNext&&(c.lucky??3)>0){m.lucky=true;c.lucky=(c.lucky??3)-1;c.luckyNext=false;feed("🍀",`Amuleto da sorte ativado! ${c.lucky} restante${c.lucky===1?"":"s"} na temporada.`,"mine");}
+    if(c.starNext>=0&&(c.stars??3)>0&&c.xi.includes(c.starNext)){m.star=c.starNext;c.stars=(c.stars??3)-1;const sp=state.sq[c.team][m.star];feed("⭐",`Noite de ${esc(sp.n)}! Ele entra inspirado. ${c.stars} noite${c.stars===1?"":"s"} do craque restante${c.stars===1?"":"s"}.`,"mine");}
+    c.starNext=-1;
     const [lh,la]=mineLambdas(m,chaos);m.p=probs(lh,la);m.ev=[];
   }else{
     const [lh,la]=lambdas(h,a,chaos);m.p=probs(lh,la);genGoals(m,lh,la,1,90,stop);
@@ -935,7 +947,7 @@ function computeFX(m){
     if(k==="cera"){const lead=m&&m.mine&&(m.h===c.team?m.gh-m.ga:m.ga-m.gh)>0;add(INSTR[k].n+(lead?" (ganhando)":" (sem vantagem)"),lead?.88:.9,lead?.82:.97);cards*=1.2;}
   });
   if(c.red)add("Jogador expulso",.8,1.25);
-  if(m&&(m.lucky||(c.luckyNext&&!m.started)))add("🍀 Amuleto da sorte",1.15,.88);
+  {const sk=m&&m.star!=null?m.star:(m&&!m.started&&c.starNext>=0?c.starNext:null);if(sk!=null){const sp=state.sq[c.team][sk];if(sp)add("⭐ Noite de "+sp.n,1.12,.95);}}
   return {a,d,fat,cards,parts};
 }
 function nextMatchOf(){const r=ROUNDS[state.round],c=state.coach;if(!r||!c)return null;const g=r.g.find(x=>x.split("-").includes(c.team));if(!g)return null;const[h,a]=g.split("-");return{h,a,mine:true}}
@@ -1298,9 +1310,13 @@ function renderSimple(){const c=state.coach;if(!c||LEVEL!=="simple")return;
   else $("sbNext").innerHTML=`<b>${state.round>=ROUNDS.length?"Temporada encerrada":"Seu time folga nesta rodada"}</b>`;
   $("sbOpts").innerHTML=SIMPLE_OPTS.map(o=>`<button type="button" data-k="${o.k}" aria-pressed="${c.style===o.k}"><span class="e">${o.e}</span><b>${o.t}</b><small>${o.d}</small></button>`).join("");
   $("sbOpts").querySelectorAll("button").forEach(b=>b.onclick=()=>{c.style=b.dataset.k;sfx("click");renderLocker();});
-  const L=c.lucky??3,lb=$("sbLuck");lb.setAttribute("aria-pressed",String(!!c.luckyNext));lb.disabled=L<=0&&!c.luckyNext;
-  lb.innerHTML=`🍀 <b>Amuleto da sorte</b><span>${c.luckyNext?"ativado para este jogo · toque para guardar":L>0?`usar neste jogo · ${L} de 3 na temporada`:"os 3 amuletos já foram usados"}</span>`;
-  lb.onclick=()=>{if(!c.luckyNext&&(c.lucky??3)<=0)return;c.luckyNext=!c.luckyNext;sfx("click");renderLocker();};
+  const S=c.stars??3,sq=state.sq[c.team];
+  const cands=c.xi.filter(k=>k>=0).map(k=>sq[k]).filter(p=>p.pos==="ATA"||p.pos==="MEI").sort((a,b)=>(b.ovr+(b.g+b.sg)*.6)-(a.ovr+(a.g+a.sg)*.6)).slice(0,3);
+  if(c.starNext>=0&&!cands.some(p=>p.k===c.starNext))c.starNext=-1;
+  const pick=c.starNext>=0?sq[c.starNext]:null;
+  $("sbStar").innerHTML=`<div class="ss-h">⭐ <b>Noite do craque</b><span>${pick?`${esc(pick.n)} entra inspirado neste jogo`:S>0?`escolha quem vai estar inspirado · ${S} de 3 na temporada`:"as 3 noites do craque já foram usadas"}</span></div>
+    <div class="ss-o">${cands.map(p=>`<button type="button" data-k="${p.k}" aria-pressed="${c.starNext===p.k}" ${S<=0&&c.starNext!==p.k?"disabled":""}><b>${esc(p.n)}</b><small>${p.pos} ${p.ovr} · ${p.g+p.sg} gol${p.g+p.sg===1?"":"s"}</small></button>`).join("")}</div>`;
+  $("sbStar").querySelectorAll("button").forEach(b=>b.onclick=()=>{const k=+b.dataset.k;if(c.starNext!==k&&S<=0)return;c.starNext=c.starNext===k?-1:k;sfx("click");renderLocker();});
   $("sbNote").textContent="Escalação, substituições e faltas ficam no automático. Nos pênaltis, você escolhe o canto.";}
 function renderLocker(){
   const c=state.coach;$("tabLineup").hidden=!c;if(!c){if(curTab==="lineup")showTab("table");return;}
@@ -1312,6 +1328,7 @@ function renderLocker(){
   const how=LEVEL==="simple"?"Escolha como o time entra e aperte Jogar rodada.":"Monte o time e aperte Jogar rodada.";
   $("coachLine").innerHTML=coachName?`Você assumiu o lugar de <b>${esc(coachName)}</b>. ${state.results.length?"":how}`:`Você é o técnico. ${how}`;
   renderSimple();
+  {const nm=nextMatchOf();$("btnRound2").textContent=nm?`▶ Jogar: ${T[nm.h].name} × ${T[nm.a].name}`:"▶ Jogar rodada";}
   $("formation").innerHTML=Object.keys(PRESETS).map(f=>`<option ${f===c.form?"selected":""}>${f}</option>`).join("")+(c.form==="Personalizada"?`<option selected disabled>Personalizada</option>`:"");
   $("styleSel").innerHTML=Object.keys(STYLE).map(k=>`<option value="${k}" ${k===c.style?"selected":""}>${STYLE[k].n}</option>`).join("");
   const used=new Set(c.xi);
@@ -1332,7 +1349,7 @@ function renderLocker(){
       ${flag?`<span class="flag">${flag}</span>`:""}</div>`;}).join("");
   bindTokens();
   renderPlan();
-  if(!state.live&&PV.w)pvPreview();
+  if(!state.live&&PV.w&&!(PV.endShow&&performance.now()<PV.endShow.until))pvPreview();
   const v=xiValue(c),rel=Math.round(100*v/c.base);
   $("xiPower").textContent=rel+"%";$("xiBar").style.width=Math.min(100,rel)+"%";$("xiBar").style.background=rel>=97?"var(--sula)":rel>=88?"var(--amber)":"var(--z4)";
   const probs=lineupProblems();
@@ -1440,7 +1457,9 @@ function doGoal(m,side,label,min,forced,pen){
   let pool;
   if(m.mine&&c&&team===c.team){const sq=state.sq[team];pool=c.xi.filter(k=>k>=0).map(k=>sq[k]);}
   else pool=topAvail(team,14);
-  const sc=forced||(pool.length?scorerFrom(pool):null), as=!pen&&sc&&rnd()<.62?assistFrom(pool,sc):null;
+  let sc=forced||(pool.length?scorerFrom(pool):null);
+  if(!forced&&m.star!=null&&c&&team===c.team){const st=state.sq[team][m.star];if(st&&pool.includes(st)&&rnd()<.45)sc=st;}
+  const as=!pen&&sc&&rnd()<.62?assistFrom(pool,sc):null;
   if(m.gh<m.ga)m.trH=true;if(m.ga<m.gh)m.trA=true;
   if(side==="h")m.gh++;else m.ga++;totalGoals++;
   if(m.gh<m.ga)m.trH=true;if(m.ga<m.gh)m.trA=true;
@@ -1742,6 +1761,11 @@ function pvDraw(now){
     const big=Math.min(72,W/7);ctx.font=`900 ${big}px "Big Shoulders Display", Impact, sans-serif`;ctx.strokeText("GOOOL!",W/2,H*.42);ctx.fillText("GOOOL!",W/2,H*.42);
     ctx.font=`800 ${big*.4}px "Big Shoulders Display", Impact, sans-serif`;ctx.strokeText(PV.celebTxt,W/2,H*.42+big*.55);ctx.fillStyle="#fff";ctx.fillText(PV.celebTxt,W/2,H*.42+big*.55);}
   else if(PV.label&&live&&now-b.t0<900){ctx.textAlign="center";ctx.font=`700 13px Barlow, Arial, sans-serif`;ctx.fillStyle="rgba(255,255,255,.9)";ctx.fillText(PV.label,X(b.x),Y(b.y)-14);}
+  if(PV.endShow&&performance.now()<PV.endShow.until&&!htResume){const e=PV.endShow,big=Math.min(62,W/7.5);
+    ctx.fillStyle="rgba(5,10,20,.66)";ctx.fillRect(0,0,W,H);ctx.textAlign="center";ctx.lineWidth=4;ctx.strokeStyle="rgba(0,0,0,.5)";
+    ctx.fillStyle="#fff";ctx.font=`900 ${big}px "Big Shoulders Display", Impact, sans-serif`;ctx.fillText("FIM DE JOGO",W/2,H*.38);
+    ctx.fillStyle="#FFB020";ctx.font=`800 ${big*.46}px "Big Shoulders Display", Impact, sans-serif`;ctx.fillText(e.line,W/2,H*.38+big*.72);
+    if(e.res){ctx.fillStyle=e.res==="VITÓRIA"?"#2BB673":e.res==="DERROTA"?"#E5484D":"#C9D6EA";ctx.font=`900 ${big*.7}px "Big Shoulders Display", Impact, sans-serif`;ctx.fillText(e.res,W/2,H*.38+big*1.55);}}
   if(htResume){ctx.fillStyle="rgba(5,10,20,.55)";ctx.fillRect(0,0,W,H);ctx.textAlign="center";ctx.fillStyle="#fff";ctx.font=`900 ${Math.min(56,W/9)}px "Big Shoulders Display", Impact, sans-serif`;ctx.fillText(pauseLabel,W/2,H/2);}
 }
 function pvPreview(){
@@ -1807,7 +1831,11 @@ function endRound(quiet){
       c.moral=Math.min(98,c.moral+6);feed("🦓",`ZEBREI! O seu ${T[wt].name} venceu o ${T[lt].name} com só ${Math.round(pw*100)}% de chance antes do jogo.`,"big");}
     else if(pw<.24&&!quiet)feed("🦓",`Zebra! ${T[wt].name} venceu o ${T[lt].name} (tinha ${Math.round(pw*100)}% de chance).`,"big");});
   updateMomentum();
-  const pvFinal=state.live.matches[PV.idx];state.live=null;state.round++;PV.preview=pvFinal||null;pvHud();if(pvFinal)$("pvTitle").textContent=pvFinal.mine?"Seu jogo · encerrado":"Encerrado";setTimeout(()=>{if(!state.live)pvPreview();},quiet?0:3500);
+  const pvFinal=state.live.matches[PV.idx];
+  if(!quiet&&pvFinal){const c=state.coach;let res="";if(c&&pvFinal.mine){const mg=pvFinal.h===c.team?pvFinal.gh:pvFinal.ga,og=pvFinal.h===c.team?pvFinal.ga:pvFinal.gh;res=mg>og?"VITÓRIA":mg<og?"DERROTA":"EMPATE";
+      feed("🏁",`Fim de jogo: ${T[pvFinal.h].name} ${pvFinal.gh} x ${pvFinal.ga} ${T[pvFinal.a].name}. ${res==="VITÓRIA"?"Vitória do "+T[c.team].name+"!":res==="DERROTA"?"Derrota do "+T[c.team].name+".":"Empate."}`,"big");}
+    PV.endShow={until:performance.now()+3300,line:`${T[pvFinal.h].name} ${pvFinal.gh} × ${pvFinal.ga} ${T[pvFinal.a].name}`,res};}
+  state.live=null;state.round++;PV.preview=pvFinal||null;pvHud();if(pvFinal)$("pvTitle").textContent=pvFinal.mine?"Seu jogo · encerrado":"Encerrado";setTimeout(()=>{if(!state.live)pvPreview();},quiet?0:3500);
   {const mineM=ms.map((m,i)=>[m,i]).filter(([m])=>m.mine);
    const res=`<div class="round-res"><h4>Resultados da rodada</h4>${ms.map(m=>`<div><span>${T[m.h].name} <b>${m.gh} x ${m.ga}</b> ${T[m.a].name}</span></div>`).join("")}</div>`;
    $("matches").innerHTML=(myTeam?mineM.map(([m,i])=>matchHTML(m,i)).join(""):ms.map((m,i)=>matchHTML(m,i)).join(""))+res;}
@@ -1969,7 +1997,7 @@ function chooseTeam(id){
   $("chaos").disabled=!!CHALLENGE;if(CHALLENGE)$("chaos").checked=false;renderChallengeTag();
   if(id){setupCoach(id);toast(CHALLENGE?`Desafio: ${missionOf(id).t}`:`Bem-vindo ao ${T[id].name}!`);feed("📝",`Você é o novo técnico do ${T[id].name}. O elenco é o real; confira lesionados e suspensos antes do primeiro jogo.`,"big");}
   else state.coach=null;
-  renderLocker();renderMatches();renderTable();showTab(id?"lineup":"table");pvPreview();
+  renderLocker();renderMatches();renderTable();showTab(id?"lineup":"table");pvPreview();setButtons();
 }
 $("btnWatch").onclick=()=>chooseTeam("");
 $("btnClub").onclick=()=>{if(busy)return;if(state.results.length){if(!clubConfirm){clubConfirm=true;$("btnClub").textContent="Recomeça tudo. Confirmar?";setTimeout(()=>{clubConfirm=false;$("btnClub").textContent="Trocar clube"},3500);return;}
@@ -1977,7 +2005,10 @@ $("btnClub").onclick=()=>{if(busy)return;if(state.results.length){if(!clubConfir
 let clubConfirm=false;
 
 // Controles
-function setButtons(){const end=state.round>=ROUNDS.length;$("btnRound").disabled=busy||end;$("btnAll").disabled=busy||end;}
+function setButtons(){const end=state.round>=ROUNDS.length;$("btnRound").disabled=busy||end;$("btnAll").disabled=busy||end;
+  $("btnRound2").disabled=busy||end;$("btnRound2").hidden=end;$("preHint").hidden=!state.coach||busy||end;}
+$("btnRound2").onclick=()=>{if(busy)return;$("pvCard").scrollIntoView({behavior:"smooth",block:"start"});startRound(false);};
+$("goLocker").onclick=()=>{showTab("lineup");$("pane-lineup").scrollIntoView({behavior:"smooth",block:"start"});};
 $("btnRound").onclick=()=>startRound(false);
 $("matches").addEventListener("click",ev=>{const el=ev.target.closest(".match");if(!el||!state.live||myTeam)return;const i=+el.id.slice(1);if(i===PV.idx)return;pvSetMatch(i);const m=state.live.matches[i];$("pvTitle").textContent=m.mine?"Seu jogo · ao vivo":"Ao vivo";$("pvCard").scrollIntoView({behavior:"smooth",block:"start"});});
 $("btnAll").onclick=runAll;
