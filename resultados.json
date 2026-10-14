@@ -1,5 +1,5 @@
 {
- "atualizado": "13/10/2026",
+ "atualizado": "14/10/2026",
  "jogos": {
   "BAH-MIR": {
    "gh": 1,
@@ -64,9 +64,9 @@
    "Lucas Monzón"
   ],
   "CAM": [
-   "Gustavo Scarpa",
    "Everson",
    "Ruan Tressoldi",
+   "Gustavo Scarpa",
    "Cassierra",
    "Fred",
    "Alan Franco|suspenso"
@@ -77,13 +77,10 @@
    "Dantas",
    "Carlos Terán"
   ],
-  "CFC": [
-   "Bruno Melo|suspenso"
-  ],
+  "CFC": [],
   "CHA": [
    "Marcinho|suspenso",
    "Heitor",
-   "Balieiro",
    "Rafael Carvalheira",
    "Max",
    "Robert"
@@ -97,13 +94,12 @@
    "Felipe Morais|suspenso",
    "Gabriel Pec",
    "Sinisterra",
-   "Lucas Romero"
+   "Villarreal"
   ],
   "FLA": [
    "Arrascaeta",
-   "Ayrton Lucas",
-   "Evertton Araújo",
-   "Danilo"
+   "Danilo",
+   "Ayrton Lucas"
   ],
   "FLU": [
    "Guilherme Arana|suspenso",
@@ -120,9 +116,9 @@
   "INT": [
    "Alan Patrick",
    "Rochet",
+   "Maripán",
    "Sanabria",
-   "Allex",
-   "Maripán"
+   "Allex"
   ],
   "MIR": [
    "Negueba",
@@ -131,6 +127,7 @@
   "PAL": [
    "Gustavo Gómez|suspenso",
    "Giay|suspenso",
+   "Vitor Roque",
    "Jefté"
   ],
   "RBB": [
@@ -145,12 +142,13 @@
   ],
   "SAN": [
    "Willian Arão|suspenso",
-   "Arthur",
    "Gabriel Brazão",
-   "Vinícius Lira"
+   "Vinícius Lira",
+   "Arthur"
   ],
   "SAO": [
    "Djhordney|suspenso",
+   "Cauly",
    "Luciano",
    "Ferreira",
    "Nicolas",
@@ -158,7 +156,12 @@
    "Domingos Duarte",
    "Danielzinho"
   ],
-  "VAS": [],
+  "VAS": [
+   "Cuesta",
+   "Barros",
+   "Spinelli",
+   "Mateus Carvalho"
+  ],
   "VIT": [
    "Cacá|suspenso",
    "Baralhas",
@@ -167,8 +170,7 @@
    "Fabiano Souza",
    "Dudu",
    "Edu",
-   "Camutanga",
-   "Kauan"
+   "Camutanga"
   ]
  },
  "tecnicos": {
