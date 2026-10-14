@@ -1827,7 +1827,7 @@ function endRound(quiet){
   if(!quiet){const top=ms.slice().sort((x,y)=>(y.gh+y.ga)-(x.gh+x.ga))[0];
     feed("FIM",`Fim da ${r.label.startsWith("Jogos")?"rodada de jogos atrasados":r.label}. Jogo da rodada: ${scoreLine(top)}.`,"big");sfx("end");}ambience(false);
   ms.forEach(m=>{if(!m.p||m.gh===m.ga)return;const w=m.gh>m.ga?"h":"a",pw=w==="h"?m.p[0]:m.p[2],wt=w==="h"?m.h:m.a,lt=w==="h"?m.a:m.h;
-    if(c&&m.mine&&wt===c.team&&pw<.36){c.zebras=(c.zebras||0)+1;if(!quiet)zebraStamp(`${T[wt].name} ${m.gh} x ${m.ga} ${T[lt].name} · só ${Math.round(pw*100)}% de chance`);
+    if(c&&m.mine&&wt===c.team&&pw<.36){c.zebras=(c.zebras||0)+1;if(!quiet)zebraStamp(`${T[wt].name} ${wt===m.h?m.gh:m.ga} x ${wt===m.h?m.ga:m.gh} ${T[lt].name} · só ${Math.round(pw*100)}% de chance`);
       c.moral=Math.min(98,c.moral+6);feed("🦓",`ZEBREI! O seu ${T[wt].name} venceu o ${T[lt].name} com só ${Math.round(pw*100)}% de chance antes do jogo.`,"big");}
     else if(pw<.24&&!quiet)feed("🦓",`Zebra! ${T[wt].name} venceu o ${T[lt].name} (tinha ${Math.round(pw*100)}% de chance).`,"big");});
   updateMomentum();
