@@ -1,5 +1,5 @@
 {
- "atualizado": "14/10/2026",
+ "atualizado": "15/10/2026",
  "jogos": {
   "BAH-MIR": {
    "gh": 1,
@@ -53,9 +53,7 @@
   }
  },
  "desfalques": {
-  "BAH": [
-   "Léo Vieira"
-  ],
+  "BAH": [],
   "BOT": [
    "Edenílson",
    "Jordan Barrera",
@@ -83,7 +81,8 @@
    "Heitor",
    "Rafael Carvalheira",
    "Max",
-   "Robert"
+   "Robert",
+   "Balieiro"
   ],
   "COR": [
    "Memphis Depay|suspenso",
@@ -94,7 +93,7 @@
    "Felipe Morais|suspenso",
    "Gabriel Pec",
    "Sinisterra",
-   "Villarreal"
+   "Lucas Romero"
   ],
   "FLA": [
    "Arrascaeta",
@@ -138,13 +137,14 @@
   "REM": [
    "Marcelo Rangel|suspenso",
    "Tchamba",
-   "Matheus Felipe"
+   "Jaderson"
   ],
   "SAN": [
    "Willian Arão|suspenso",
    "Gabriel Brazão",
    "Vinícius Lira",
-   "Arthur"
+   "Arthur",
+   "Lima"
   ],
   "SAO": [
    "Djhordney|suspenso",
@@ -166,10 +166,8 @@
    "Cacá|suspenso",
    "Baralhas",
    "Ramon",
-   "Nathan Mendes",
-   "Fabiano Souza",
    "Dudu",
-   "Edu",
+   "Fabiano Souza",
    "Camutanga"
   ]
  },
