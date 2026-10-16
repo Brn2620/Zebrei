@@ -1,5 +1,5 @@
 {
- "atualizado": "15/10/2026",
+ "atualizado": "16/10/2026",
  "jogos": {
   "BAH-MIR": {
    "gh": 1,
@@ -53,7 +53,9 @@
   }
  },
  "desfalques": {
-  "BAH": [],
+  "BAH": [
+   "Léo Vieira"
+  ],
   "BOT": [
    "Edenílson",
    "Jordan Barrera",
@@ -87,7 +89,8 @@
   "COR": [
    "Memphis Depay|suspenso",
    "Kayke",
-   "Labyad"
+   "Labyad",
+   "Raniele"
   ],
   "CRU": [
    "Felipe Morais|suspenso",
@@ -98,7 +101,8 @@
   "FLA": [
    "Arrascaeta",
    "Danilo",
-   "Ayrton Lucas"
+   "Ayrton Lucas",
+   "Evertton Araújo"
   ],
   "FLU": [
    "Guilherme Arana|suspenso",
@@ -106,7 +110,8 @@
    "John Kennedy",
    "Matheus Reis",
    "Alisson",
-   "Riquelme Felipe"
+   "Riquelme Felipe",
+   "Ganso"
   ],
   "GRE": [
    "Wallace|suspenso",
@@ -115,9 +120,10 @@
   "INT": [
    "Alan Patrick",
    "Rochet",
+   "Anthoni",
    "Maripán",
    "Sanabria",
-   "Allex"
+   "Kayky"
   ],
   "MIR": [
    "Negueba",
@@ -132,15 +138,17 @@
   "RBB": [
    "Davi Gomes",
    "Rodriguinho",
-   "Henry Mosquera"
+   "Henry Mosquera",
+   "Alix Vinícius"
   ],
   "REM": [
    "Marcelo Rangel|suspenso",
    "Tchamba",
-   "Jaderson"
+   "Jaderson",
+   "João Lucas"
   ],
   "SAN": [
-   "Willian Arão|suspenso",
+   "Willian Arão",
    "Gabriel Brazão",
    "Vinícius Lira",
    "Arthur",
@@ -149,12 +157,10 @@
   "SAO": [
    "Djhordney|suspenso",
    "Cauly",
-   "Luciano",
-   "Ferreira",
+   "Danielzinho",
    "Nicolas",
    "Aurélio Buta",
-   "Domingos Duarte",
-   "Danielzinho"
+   "Domingos Duarte"
   ],
   "VAS": [
    "Cuesta",
@@ -168,7 +174,9 @@
    "Ramon",
    "Dudu",
    "Fabiano Souza",
-   "Camutanga"
+   "Camutanga",
+   "Nathan Mendes",
+   "Edu"
   ]
  },
  "tecnicos": {
