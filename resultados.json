@@ -1,5 +1,5 @@
 {
- "atualizado": "16/10/2026",
+ "atualizado": "17/10/2026",
  "jogos": {
   "BAH-MIR": {
    "gh": 1,
@@ -30,6 +30,11 @@
    "gh": 1,
    "ga": 1,
    "data": "11/10"
+  },
+  "MIR-INT": {
+   "gh": 2,
+   "ga": 0,
+   "data": "16/10"
   },
   "PAL-COR": {
    "gh": 4,
@@ -101,8 +106,7 @@
   "FLA": [
    "Arrascaeta",
    "Danilo",
-   "Ayrton Lucas",
-   "Evertton Araújo"
+   "Ayrton Lucas"
   ],
   "FLU": [
    "Guilherme Arana|suspenso",
@@ -118,6 +122,7 @@
    "Jovane Cabral"
   ],
   "INT": [
+   "Matheus Cunha|suspenso",
    "Alan Patrick",
    "Rochet",
    "Anthoni",
