@@ -1,15 +1,30 @@
 {
- "atualizado": "17/10/2026",
+ "atualizado": "18/10/2026",
  "jogos": {
   "BAH-MIR": {
    "gh": 1,
    "ga": 0,
    "data": "11/10"
   },
+  "BOT-CHA": {
+   "gh": 1,
+   "ga": 0,
+   "data": "17/10"
+  },
+  "CAM-CFC": {
+   "gh": 1,
+   "ga": 0,
+   "data": "17/10"
+  },
   "CAM-SAN": {
    "gh": 2,
    "ga": 1,
    "data": "11/10"
+  },
+  "CAP-PAL": {
+   "gh": 0,
+   "ga": 2,
+   "data": "17/10"
   },
   "CFC-BOT": {
    "gh": 1,
@@ -46,6 +61,11 @@
    "ga": 2,
    "data": "12/10"
   },
+  "SAO-VAS": {
+   "gh": 1,
+   "ga": 0,
+   "data": "17/10"
+  },
   "SAO-VIT": {
    "gh": 2,
    "ga": 1,
@@ -73,18 +93,17 @@
    "Ruan Tressoldi",
    "Gustavo Scarpa",
    "Cassierra",
-   "Fred",
-   "Alan Franco|suspenso"
+   "Fred"
   ],
   "CAP": [
    "Benavídez",
    "Kerwin Vargas",
    "Dantas",
-   "Carlos Terán"
+   "Carlos Terán",
+   "Lucas Esquivel"
   ],
   "CFC": [],
   "CHA": [
-   "Marcinho|suspenso",
    "Heitor",
    "Rafael Carvalheira",
    "Max",
@@ -93,7 +112,6 @@
   ],
   "COR": [
    "Memphis Depay|suspenso",
-   "Kayke",
    "Labyad",
    "Raniele"
   ],
@@ -101,66 +119,72 @@
    "Felipe Morais|suspenso",
    "Gabriel Pec",
    "Sinisterra",
-   "Lucas Romero"
+   "Kaique Kenji"
   ],
   "FLA": [
    "Arrascaeta",
    "Danilo",
-   "Ayrton Lucas"
+   "Saúl",
+   "Ayrton Lucas",
+   "Evertton Araújo"
   ],
   "FLU": [
    "Guilherme Arana|suspenso",
+   "Martinelli",
    "Germán Cano",
    "John Kennedy",
    "Matheus Reis",
    "Alisson",
-   "Riquelme Felipe",
-   "Ganso"
+   "Riquelme Felipe"
   ],
   "GRE": [
    "Wallace|suspenso",
+   "Nardoni",
+   "João Borne",
    "Jovane Cabral"
   ],
   "INT": [
    "Matheus Cunha|suspenso",
+   "Mercado|suspenso",
+   "Villagra|suspenso",
+   "Vitinho|suspenso",
    "Alan Patrick",
    "Rochet",
    "Anthoni",
    "Maripán",
    "Sanabria",
-   "Kayky"
+   "Kayky",
+   "Allex"
   ],
   "MIR": [
-   "Negueba",
-   "Aldo Filho"
+   "Negueba"
   ],
   "PAL": [
-   "Gustavo Gómez|suspenso",
-   "Giay|suspenso",
+   "Andreas Pereira|suspenso",
+   "Piquerez|suspenso",
    "Vitor Roque",
    "Jefté"
   ],
   "RBB": [
-   "Davi Gomes",
    "Rodriguinho",
    "Henry Mosquera",
-   "Alix Vinícius"
+   "Davi Gomes"
   ],
   "REM": [
    "Marcelo Rangel|suspenso",
+   "Mayk",
    "Tchamba",
-   "Jaderson",
-   "João Lucas"
+   "Matheus Felipe"
   ],
   "SAN": [
-   "Willian Arão",
+   "Willian Arão|suspenso",
    "Gabriel Brazão",
    "Vinícius Lira",
    "Arthur",
-   "Lima"
+   "Lima",
+   "Escobar"
   ],
   "SAO": [
-   "Djhordney|suspenso",
    "Cauly",
    "Danielzinho",
    "Nicolas",
