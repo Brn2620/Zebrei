@@ -1,6 +1,11 @@
 {
- "atualizado": "18/10/2026",
+ "atualizado": "19/10/2026",
  "jogos": {
+  "BAH-FLA": {
+   "gh": 0,
+   "ga": 3,
+   "data": "18/10"
+  },
   "BAH-MIR": {
    "gh": 1,
    "ga": 0,
@@ -41,6 +46,16 @@
    "ga": 0,
    "data": "11/10"
   },
+  "FLU-SAN": {
+   "gh": 1,
+   "ga": 2,
+   "data": "18/10"
+  },
+  "GRE-CRU": {
+   "gh": 2,
+   "ga": 4,
+   "data": "18/10"
+  },
   "GRE-INT": {
    "gh": 1,
    "ga": 1,
@@ -61,6 +76,11 @@
    "ga": 2,
    "data": "12/10"
   },
+  "REM-RBB": {
+   "gh": 1,
+   "ga": 1,
+   "data": "18/10"
+  },
   "SAO-VAS": {
    "gh": 1,
    "ga": 0,
@@ -79,7 +99,9 @@
  },
  "desfalques": {
   "BAH": [
-   "Léo Vieira"
+   "Léo Vieira",
+   "Jean Lucas|suspenso",
+   "Román Gómez|suspenso"
   ],
   "BOT": [
    "Edenílson",
@@ -100,9 +122,12 @@
    "Kerwin Vargas",
    "Dantas",
    "Carlos Terán",
-   "Lucas Esquivel"
+   "Lucas Esquivel",
+   "Claudinho"
   ],
-  "CFC": [],
+  "CFC": [
+   "Thiago Santos|suspenso"
+  ],
   "CHA": [
    "Heitor",
    "Rafael Carvalheira",
@@ -111,12 +136,12 @@
    "Balieiro"
   ],
   "COR": [
-   "Memphis Depay|suspenso",
    "Labyad",
-   "Raniele"
+   "Raniele",
+   "Kayke Ferrari"
   ],
   "CRU": [
-   "Felipe Morais|suspenso",
+   "João Marcelo|suspenso",
    "Gabriel Pec",
    "Sinisterra",
    "Kaique Kenji"
@@ -129,7 +154,7 @@
    "Evertton Araújo"
   ],
   "FLU": [
-   "Guilherme Arana|suspenso",
+   "Savarino|suspenso",
    "Martinelli",
    "Germán Cano",
    "John Kennedy",
@@ -138,7 +163,7 @@
    "Riquelme Felipe"
   ],
   "GRE": [
-   "Wallace|suspenso",
+   "Kannemann|suspenso",
    "Nardoni",
    "João Borne",
    "Jovane Cabral"
@@ -157,6 +182,7 @@
    "Allex"
   ],
   "MIR": [
+   "André Luís|suspenso",
    "Negueba"
   ],
   "PAL": [
@@ -171,13 +197,13 @@
    "Davi Gomes"
   ],
   "REM": [
-   "Marcelo Rangel|suspenso",
+   "Gabriel Taliari|suspenso",
    "Mayk",
    "Tchamba",
    "Matheus Felipe"
   ],
   "SAN": [
-   "Willian Arão|suspenso",
+   "Willian Arão",
    "Gabriel Brazão",
    "Vinícius Lira",
    "Arthur",
@@ -185,11 +211,11 @@
    "Escobar"
   ],
   "SAO": [
-   "Cauly",
    "Danielzinho",
    "Nicolas",
    "Aurélio Buta",
-   "Domingos Duarte"
+   "Domingos Duarte",
+   "Ferreirinha"
   ],
   "VAS": [
    "Cuesta",
@@ -198,7 +224,6 @@
    "Mateus Carvalho"
   ],
   "VIT": [
-   "Cacá|suspenso",
    "Baralhas",
    "Ramon",
    "Dudu",
