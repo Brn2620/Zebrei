@@ -1,5 +1,5 @@
 {
- "atualizado": "21/10/2026",
+ "atualizado": "23/10/2026",
  "jogos": {
   "BAH-FLA": {
    "gh": 0,
@@ -112,22 +112,19 @@
    "Edenílson",
    "Jordan Barrera",
    "Kaio Pantaleão",
-   "Arthur Chaves",
    "Lucas Monzón"
   ],
   "CAM": [
-   "Everson",
+   "Thiago Borbas",
    "Ruan Tressoldi",
    "Gustavo Scarpa",
    "Cassierra",
-   "Fred",
-   "Thiago Borbas"
+   "Fred"
   ],
   "CAP": [
    "Benavídez",
    "Dantas",
    "Carlos Terán",
-   "Lucas Esquivel",
    "Claudinho"
   ],
   "CFC": [
@@ -141,8 +138,10 @@
    "Balieiro"
   ],
   "COR": [
-   "Labyad",
+   "Memphis Depay",
+   "Gabriel Paulista",
    "Raniele",
+   "Labyad",
    "Kayke Ferrari"
   ],
   "CRU": [
@@ -154,13 +153,11 @@
   "FLA": [
    "Arrascaeta",
    "Danilo",
-   "Saúl",
    "Evertton Araújo"
   ],
   "FLU": [
    "Savarino|suspenso",
-   "Martinelli",
-   "Germán Cano",
+   "Julián Millán",
    "John Kennedy",
    "Matheus Reis",
    "Alisson",
@@ -168,8 +165,8 @@
   ],
   "GRE": [
    "Kannemann|suspenso",
+   "Danilo Barbosa",
    "Nardoni",
-   "João Borne",
    "Jovane Cabral"
   ],
   "INT": [
@@ -178,8 +175,6 @@
    "Villagra|suspenso",
    "Vitinho|suspenso",
    "Rochet",
-   "Anthoni",
-   "Maripán",
    "Sanabria",
    "Kayky",
    "Allex"
@@ -191,41 +186,37 @@
   "PAL": [
    "Andreas Pereira|suspenso",
    "Piquerez|suspenso",
-   "Vitor Roque",
    "Jefté"
   ],
   "RBB": [
    "Eric Ramires|suspenso",
-   "Rodriguinho",
-   "Henry Mosquera",
    "Davi Gomes"
   ],
   "REM": [
    "Gabriel Taliari|suspenso",
-   "Mayk",
-   "Tchamba",
-   "Matheus Felipe",
-   "Jáderson"
+   "Gabriel Poveda",
+   "Yago Pikachu",
+   "Mayk"
   ],
   "SAN": [
-   "Willian Arão",
-   "Gabriel Brazão",
-   "Vinícius Lira",
-   "Arthur",
+   "Lucas Veríssimo",
    "Escobar",
-   "Lucas Veríssimo"
+   "Willian Arão",
+   "Arthur",
+   "Gabriel Brazão",
+   "Vinícius Lira"
   ],
   "SAO": [
    "Danielzinho",
    "Nicolas",
    "Aurélio Buta",
-   "Domingos Duarte"
+   "Domingos Duarte",
+   "Ferreirinha"
   ],
   "VAS": [
    "Cuesta",
    "Barros",
-   "Spinelli",
-   "Mateus Carvalho"
+   "Spinelli"
   ],
   "VIT": [
    "Renê|suspenso",
@@ -233,10 +224,7 @@
    "Ramon",
    "Dudu",
    "Fabiano Souza",
-   "Camutanga",
-   "Nathan Mendes",
-   "Edu",
-   "Osvaldo"
+   "Nathan Mendes"
   ]
  },
  "tecnicos": {
