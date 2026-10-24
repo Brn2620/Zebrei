@@ -1,5 +1,5 @@
 {
- "atualizado": "23/10/2026",
+ "atualizado": "24/10/2026",
  "jogos": {
   "BAH-FLA": {
    "gh": 0,
@@ -45,6 +45,11 @@
    "gh": 1,
    "ga": 1,
    "data": "19/10"
+  },
+  "CRU-REM": {
+   "gh": 1,
+   "ga": 0,
+   "data": "23/10"
   },
   "FLA-FLU": {
    "gh": 1,
@@ -109,10 +114,9 @@
    "Román Gómez|suspenso"
   ],
   "BOT": [
-   "Edenílson",
-   "Jordan Barrera",
+   "Arthur Chaves",
    "Kaio Pantaleão",
-   "Lucas Monzón"
+   "Jordan Barrera"
   ],
   "CAM": [
    "Thiago Borbas",
@@ -122,33 +126,33 @@
    "Fred"
   ],
   "CAP": [
+   "Arthur Dias",
+   "Kerwin Vargas",
    "Benavídez",
-   "Dantas",
-   "Carlos Terán",
-   "Claudinho"
+   "Dantas"
   ],
   "CFC": [
    "Thiago Santos|suspenso"
   ],
   "CHA": [
-   "Heitor",
+   "Kauan Faria|suspenso",
    "Rafael Carvalheira",
-   "Max",
+   "Marcinho",
    "Robert",
-   "Balieiro"
+   "Heitor"
   ],
   "COR": [
    "Memphis Depay",
    "Gabriel Paulista",
+   "Alex Santana",
    "Raniele",
    "Labyad",
    "Kayke Ferrari"
   ],
   "CRU": [
-   "João Marcelo|suspenso",
+   "Felipe Morais",
    "Gabriel Pec",
-   "Sinisterra",
-   "Kaique Kenji"
+   "Sinisterra"
   ],
   "FLA": [
    "Arrascaeta",
@@ -158,10 +162,10 @@
   "FLU": [
    "Savarino|suspenso",
    "Julián Millán",
+   "Martinelli",
    "John Kennedy",
    "Matheus Reis",
-   "Alisson",
-   "Riquelme Felipe"
+   "Alisson"
   ],
   "GRE": [
    "Kannemann|suspenso",
@@ -186,14 +190,13 @@
   "PAL": [
    "Andreas Pereira|suspenso",
    "Piquerez|suspenso",
-   "Jefté"
+   "Vitor Roque"
   ],
   "RBB": [
    "Eric Ramires|suspenso",
    "Davi Gomes"
   ],
   "REM": [
-   "Gabriel Taliari|suspenso",
    "Gabriel Poveda",
    "Yago Pikachu",
    "Mayk"
@@ -207,11 +210,13 @@
    "Vinícius Lira"
   ],
   "SAO": [
+   "Calleri",
+   "Artur",
    "Danielzinho",
-   "Nicolas",
-   "Aurélio Buta",
+   "Ferreirinha",
    "Domingos Duarte",
-   "Ferreirinha"
+   "Aurélio Buta",
+   "Nicolas"
   ],
   "VAS": [
    "Cuesta",
