@@ -1,5 +1,5 @@
 {
- "atualizado": "24/10/2026",
+ "atualizado": "25/10/2026",
  "jogos": {
   "BAH-FLA": {
    "gh": 0,
@@ -41,6 +41,11 @@
    "ga": 4,
    "data": "12/10"
   },
+  "CHA-FLU": {
+   "gh": 2,
+   "ga": 1,
+   "data": "24/10"
+  },
   "COR-VIT": {
    "gh": 1,
    "ga": 1,
@@ -71,15 +76,30 @@
    "ga": 1,
    "data": "11/10"
   },
+  "INT-BOT": {
+   "gh": 3,
+   "ga": 0,
+   "data": "24/10"
+  },
   "MIR-INT": {
    "gh": 2,
    "ga": 0,
    "data": "16/10"
   },
+  "MIR-SAO": {
+   "gh": 1,
+   "ga": 1,
+   "data": "24/10"
+  },
   "PAL-COR": {
    "gh": 4,
    "ga": 1,
    "data": "11/10"
+  },
+  "PAL-RBB": {
+   "gh": 2,
+   "ga": 0,
+   "data": "24/10"
   },
   "RBB-CRU": {
    "gh": 4,
@@ -91,6 +111,11 @@
    "ga": 1,
    "data": "18/10"
   },
+  "SAN-BAH": {
+   "gh": 1,
+   "ga": 1,
+   "data": "24/10"
+  },
   "SAO-VAS": {
    "gh": 1,
    "ga": 0,
@@ -101,19 +126,29 @@
    "ga": 1,
    "data": "10/10"
   },
+  "VAS-COR": {
+   "gh": 3,
+   "ga": 2,
+   "data": "24/10"
+  },
   "VAS-REM": {
    "gh": 0,
    "ga": 0,
    "data": "10/10"
+  },
+  "VIT-CAP": {
+   "gh": 1,
+   "ga": 1,
+   "data": "24/10"
   }
  },
  "desfalques": {
   "BAH": [
-   "Léo Vieira",
-   "Jean Lucas|suspenso",
-   "Román Gómez|suspenso"
+   "Kanu|suspenso",
+   "Léo Vieira"
   ],
   "BOT": [
+   "Álvaro Montoro|suspenso",
    "Arthur Chaves",
    "Kaio Pantaleão",
    "Jordan Barrera"
@@ -126,16 +161,14 @@
    "Fred"
   ],
   "CAP": [
-   "Arthur Dias",
-   "Kerwin Vargas",
-   "Benavídez",
-   "Dantas"
+   "Claudinho",
+   "Dantas",
+   "Benavídez"
   ],
   "CFC": [
    "Thiago Santos|suspenso"
   ],
   "CHA": [
-   "Kauan Faria|suspenso",
    "Rafael Carvalheira",
    "Marcinho",
    "Robert",
@@ -144,15 +177,13 @@
   "COR": [
    "Memphis Depay",
    "Gabriel Paulista",
-   "Alex Santana",
    "Raniele",
    "Labyad",
    "Kayke Ferrari"
   ],
   "CRU": [
-   "Felipe Morais",
-   "Gabriel Pec",
-   "Sinisterra"
+   "Sinisterra",
+   "Gabriel Pec"
   ],
   "FLA": [
    "Arrascaeta",
@@ -160,40 +191,31 @@
    "Evertton Araújo"
   ],
   "FLU": [
-   "Savarino|suspenso",
-   "Julián Millán",
-   "Martinelli",
-   "John Kennedy",
    "Matheus Reis",
+   "John Kennedy",
    "Alisson"
   ],
   "GRE": [
    "Kannemann|suspenso",
-   "Danilo Barbosa",
-   "Nardoni",
-   "Jovane Cabral"
+   "Danilo Barbosa"
   ],
   "INT": [
-   "Matheus Cunha|suspenso",
-   "Mercado|suspenso",
-   "Villagra|suspenso",
-   "Vitinho|suspenso",
    "Rochet",
    "Sanabria",
    "Kayky",
    "Allex"
   ],
   "MIR": [
-   "André Luís|suspenso",
    "Negueba"
   ],
   "PAL": [
-   "Andreas Pereira|suspenso",
-   "Piquerez|suspenso",
    "Vitor Roque"
   ],
   "RBB": [
-   "Eric Ramires|suspenso",
+   "Gustavo Marques",
+   "Andrés Hurtado",
+   "Gustavinho",
+   "Rodriguinho",
    "Davi Gomes"
   ],
   "REM": [
@@ -202,6 +224,7 @@
    "Mayk"
   ],
   "SAN": [
+   "Neymar|suspenso",
    "Lucas Veríssimo",
    "Escobar",
    "Willian Arão",
@@ -219,17 +242,16 @@
    "Nicolas"
   ],
   "VAS": [
-   "Cuesta",
-   "Barros",
-   "Spinelli"
+   "Andrés Gómez"
   ],
   "VIT": [
-   "Renê|suspenso",
+   "Luan Cândido|suspenso",
+   "Marinho|suspenso",
    "Baralhas",
-   "Ramon",
    "Dudu",
    "Fabiano Souza",
-   "Nathan Mendes"
+   "Nathan Mendes",
+   "Ramon"
   ]
  },
  "tecnicos": {
