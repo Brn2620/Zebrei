@@ -1,5 +1,5 @@
 {
- "atualizado": "26/10/2026",
+ "atualizado": "27/10/2026",
  "jogos": {
   "BAH-FLA": {
    "gh": 0,
@@ -36,6 +36,11 @@
    "ga": 1,
    "data": "12/10"
   },
+  "CFC-GRE": {
+   "gh": 0,
+   "ga": 1,
+   "data": "26/10"
+  },
   "CHA-CAP": {
    "gh": 1,
    "ga": 4,
@@ -55,6 +60,11 @@
    "gh": 1,
    "ga": 0,
    "data": "23/10"
+  },
+  "FLA-CAM": {
+   "gh": 3,
+   "ga": 2,
+   "data": "26/10"
   },
   "FLA-FLU": {
    "gh": 1,
@@ -149,11 +159,11 @@
   ],
   "BOT": [
    "Álvaro Montoro|suspenso",
-   "Arthur Chaves",
    "Kaio Pantaleão",
    "Jordan Barrera"
   ],
   "CAM": [
+   "Vitor Hugo|suspenso",
    "Cuello",
    "Ruan Tressoldi",
    "Fred",
@@ -161,12 +171,13 @@
    "Thiago Borbas"
   ],
   "CAP": [
+   "Jadson|suspenso",
    "Claudinho",
    "Dantas",
    "Benavídez"
   ],
   "CFC": [
-   "Thiago Santos|suspenso"
+   "Lucas Ronier"
   ],
   "CHA": [
    "Rafael Carvalheira",
@@ -175,6 +186,7 @@
    "Heitor"
   ],
   "COR": [
+   "Lingard|suspenso",
    "Memphis Depay",
    "Gabriel Paulista",
    "Raniele",
@@ -183,24 +195,28 @@
   ],
   "CRU": [
    "Sinisterra",
-   "Gabriel Pec"
+   "Gabriel Pec",
+   "Felipe Morais"
   ],
   "FLA": [
-   "Arrascaeta",
+   "Carrascal|suspenso",
    "Danilo",
-   "Evertton Araújo"
+   "Evertton Araújo",
+   "Saúl"
   ],
   "FLU": [
    "Matheus Reis",
    "John Kennedy",
-   "Alisson"
+   "Alisson",
+   "Millán",
+   "Martinelli"
   ],
   "GRE": [
-   "Kannemann|suspenso",
    "Danilo Barbosa",
    "Nardoni",
    "Jovane Cabral",
-   "João Borne"
+   "João Borne",
+   "Diego Caito"
   ],
   "INT": [
    "Rochet",
@@ -212,7 +228,9 @@
    "Negueba"
   ],
   "PAL": [
-   "Vitor Roque"
+   "Ramón Sosa",
+   "Paulinho",
+   "Heittor"
   ],
   "RBB": [
    "Gustavo Marques",
@@ -222,6 +240,7 @@
    "Davi Gomes"
   ],
   "REM": [
+   "Zé Ivaldo|suspenso",
    "Gabriel Poveda",
    "Yago Pikachu",
    "Mayk"
@@ -229,16 +248,15 @@
   "SAN": [
    "Neymar|suspenso",
    "Lucas Veríssimo",
+   "Gabriel Brazão",
+   "Vinícius Lira",
    "Escobar",
    "Willian Arão",
-   "Arthur",
-   "Gabriel Brazão",
-   "Vinícius Lira"
+   "Arthur"
   ],
   "SAO": [
-   "Calleri",
+   "Iago|suspenso",
    "Artur",
-   "Danielzinho",
    "Ferreirinha",
    "Domingos Duarte",
    "Aurélio Buta",
