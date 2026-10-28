@@ -1,5 +1,5 @@
 {
- "atualizado": "27/10/2026",
+ "atualizado": "28/10/2026",
  "jogos": {
   "BAH-FLA": {
    "gh": 0,
@@ -166,20 +166,20 @@
    "Vitor Hugo|suspenso",
    "Cuello",
    "Ruan Tressoldi",
-   "Fred",
    "Cassierra",
    "Thiago Borbas"
   ],
   "CAP": [
    "Jadson|suspenso",
-   "Claudinho",
-   "Dantas",
-   "Benavídez"
+   "Gilberto Moraes|suspenso",
+   "Claudinho"
   ],
   "CFC": [
    "Lucas Ronier"
   ],
   "CHA": [
+   "Camilo|suspenso",
+   "Yago Felipe|suspenso",
    "Rafael Carvalheira",
    "Marcinho",
    "Robert",
@@ -201,28 +201,25 @@
   "FLA": [
    "Carrascal|suspenso",
    "Danilo",
-   "Evertton Araújo",
-   "Saúl"
+   "Evertton Araújo"
   ],
   "FLU": [
-   "Matheus Reis",
-   "John Kennedy",
    "Alisson",
+   "John Kennedy",
    "Millán",
    "Martinelli"
   ],
   "GRE": [
+   "Diego Caito",
    "Danilo Barbosa",
-   "Nardoni",
    "Jovane Cabral",
-   "João Borne",
-   "Diego Caito"
+   "João Borne"
   ],
   "INT": [
+   "Victor Gabriel|suspenso",
    "Rochet",
    "Sanabria",
-   "Kayky",
-   "Allex"
+   "Kayky"
   ],
   "MIR": [
    "Negueba"
@@ -230,12 +227,11 @@
   "PAL": [
    "Ramón Sosa",
    "Paulinho",
-   "Heittor"
+   "Jefté"
   ],
   "RBB": [
-   "Gustavo Marques",
-   "Andrés Hurtado",
-   "Gustavinho",
+   "Tiago Volpi|suspenso",
+   "Gabriel|suspenso",
    "Rodriguinho",
    "Davi Gomes"
   ],
@@ -260,19 +256,22 @@
    "Ferreirinha",
    "Domingos Duarte",
    "Aurélio Buta",
-   "Nicolas"
+   "Nicolas",
+   "Marcos Antônio"
   ],
   "VAS": [
-   "Andrés Gómez"
+   "Andrés Gómez",
+   "Barros",
+   "Cuesta"
   ],
   "VIT": [
    "Luan Cândido|suspenso",
    "Marinho|suspenso",
    "Baralhas",
+   "Ramon",
    "Dudu",
    "Fabiano Souza",
-   "Nathan Mendes",
-   "Ramon"
+   "Nathan Mendes"
   ]
  },
  "tecnicos": {
@@ -280,7 +279,7 @@
   "BOT": "Tite",
   "CAM": "Eduardo Domínguez",
   "CAP": "Odair Hellmann",
-  "CFC": "Fernando Seabra",
+  "CFC": "Guilherme Bossle",
   "CHA": "Rafael Lacerda",
   "COR": "Clarence Seedorf",
   "CRU": "Artur Jorge",
