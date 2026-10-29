@@ -1,5 +1,5 @@
 {
- "atualizado": "28/10/2026",
+ "atualizado": "29/10/2026",
  "jogos": {
   "BAH-FLA": {
    "gh": 0,
@@ -10,6 +10,11 @@
    "gh": 1,
    "ga": 0,
    "data": "11/10"
+  },
+  "BAH-SAO": {
+   "gh": 3,
+   "ga": 2,
+   "data": "28/10"
   },
   "BOT-CHA": {
    "gh": 1,
@@ -71,6 +76,11 @@
    "ga": 0,
    "data": "11/10"
   },
+  "FLU-INT": {
+   "gh": 2,
+   "ga": 1,
+   "data": "28/10"
+  },
   "FLU-SAN": {
    "gh": 1,
    "ga": 2,
@@ -111,10 +121,20 @@
    "ga": 0,
    "data": "24/10"
   },
+  "RBB-CHA": {
+   "gh": 3,
+   "ga": 0,
+   "data": "28/10"
+  },
   "RBB-CRU": {
    "gh": 4,
    "ga": 2,
    "data": "12/10"
+  },
+  "REM-BOT": {
+   "gh": 2,
+   "ga": 1,
+   "data": "28/10"
   },
   "REM-RBB": {
    "gh": 1,
@@ -125,6 +145,11 @@
    "gh": 1,
    "ga": 1,
    "data": "24/10"
+  },
+  "SAN-PAL": {
+   "gh": 0,
+   "ga": 0,
+   "data": "28/10"
   },
   "SAO-VAS": {
    "gh": 1,
@@ -154,17 +179,16 @@
  },
  "desfalques": {
   "BAH": [
-   "Kanu|suspenso",
    "Léo Vieira"
   ],
   "BOT": [
-   "Álvaro Montoro|suspenso",
+   "Danilo",
+   "Arthur Chaves",
    "Kaio Pantaleão",
    "Jordan Barrera"
   ],
   "CAM": [
    "Vitor Hugo|suspenso",
-   "Cuello",
    "Ruan Tressoldi",
    "Cassierra",
    "Thiago Borbas"
@@ -178,8 +202,6 @@
    "Lucas Ronier"
   ],
   "CHA": [
-   "Camilo|suspenso",
-   "Yago Felipe|suspenso",
    "Rafael Carvalheira",
    "Marcinho",
    "Robert",
@@ -190,6 +212,7 @@
    "Memphis Depay",
    "Gabriel Paulista",
    "Raniele",
+   "Alex Santana",
    "Labyad",
    "Kayke Ferrari"
   ],
@@ -204,19 +227,19 @@
    "Evertton Araújo"
   ],
   "FLU": [
-   "Alisson",
-   "John Kennedy",
+   "Ignácio|suspenso",
    "Millán",
+   "John Kennedy",
    "Martinelli"
   ],
   "GRE": [
    "Diego Caito",
+   "Pavón",
    "Danilo Barbosa",
    "Jovane Cabral",
    "João Borne"
   ],
   "INT": [
-   "Victor Gabriel|suspenso",
    "Rochet",
    "Sanabria",
    "Kayky"
@@ -230,14 +253,12 @@
    "Jefté"
   ],
   "RBB": [
-   "Tiago Volpi|suspenso",
-   "Gabriel|suspenso",
    "Rodriguinho",
    "Davi Gomes"
   ],
   "REM": [
-   "Zé Ivaldo|suspenso",
    "Gabriel Poveda",
+   "Matheus Felipe",
    "Yago Pikachu",
    "Mayk"
   ],
@@ -251,13 +272,12 @@
    "Arthur"
   ],
   "SAO": [
-   "Iago|suspenso",
+   "Marcos Antônio",
    "Artur",
    "Ferreirinha",
    "Domingos Duarte",
    "Aurélio Buta",
-   "Nicolas",
-   "Marcos Antônio"
+   "Nicolas"
   ],
   "VAS": [
    "Andrés Gómez",
