@@ -1,5 +1,5 @@
 {
- "atualizado": "29/10/2026",
+ "atualizado": "30/10/2026",
  "jogos": {
   "BAH-FLA": {
    "gh": 0,
@@ -25,6 +25,11 @@
    "gh": 1,
    "ga": 0,
    "data": "17/10"
+  },
+  "CAM-CRU": {
+   "gh": 0,
+   "ga": 1,
+   "data": "29/10"
   },
   "CAM-SAN": {
    "gh": 2,
@@ -85,6 +90,11 @@
    "gh": 1,
    "ga": 2,
    "data": "18/10"
+  },
+  "GRE-CAP": {
+   "gh": 2,
+   "ga": 0,
+   "data": "29/10"
   },
   "GRE-CRU": {
    "gh": 2,
@@ -166,6 +176,11 @@
    "ga": 2,
    "data": "24/10"
   },
+  "VAS-FLA": {
+   "gh": 1,
+   "ga": 4,
+   "data": "29/10"
+  },
   "VAS-REM": {
    "gh": 0,
    "ga": 0,
@@ -188,14 +203,12 @@
    "Jordan Barrera"
   ],
   "CAM": [
-   "Vitor Hugo|suspenso",
    "Ruan Tressoldi",
+   "Fred",
    "Cassierra",
    "Thiago Borbas"
   ],
   "CAP": [
-   "Jadson|suspenso",
-   "Gilberto Moraes|suspenso",
    "Claudinho"
   ],
   "CFC": [
@@ -212,41 +225,42 @@
    "Memphis Depay",
    "Gabriel Paulista",
    "Raniele",
-   "Alex Santana",
    "Labyad",
    "Kayke Ferrari"
   ],
   "CRU": [
+   "Matheus Pereira|suspenso",
+   "William|suspenso",
    "Sinisterra",
    "Gabriel Pec",
-   "Felipe Morais"
+   "Felipe Morais",
+   "João Marcelo"
   ],
   "FLA": [
-   "Carrascal|suspenso",
+   "Gonzalo Plata|suspenso",
    "Danilo",
    "Evertton Araújo"
   ],
   "FLU": [
    "Ignácio|suspenso",
    "Millán",
-   "John Kennedy",
    "Martinelli"
   ],
   "GRE": [
+   "Weverton|suspenso",
+   "Carlos Vinícius|suspenso",
    "Diego Caito",
    "Pavón",
    "Danilo Barbosa",
    "Jovane Cabral",
-   "João Borne"
+   "Juan Nardoni"
   ],
   "INT": [
    "Rochet",
    "Sanabria",
    "Kayky"
   ],
-  "MIR": [
-   "Negueba"
-  ],
+  "MIR": [],
   "PAL": [
    "Ramón Sosa",
    "Paulinho",
@@ -256,22 +270,17 @@
    "Rodriguinho",
    "Davi Gomes"
   ],
-  "REM": [
-   "Gabriel Poveda",
-   "Matheus Felipe",
-   "Yago Pikachu",
-   "Mayk"
-  ],
+  "REM": [],
   "SAN": [
    "Neymar|suspenso",
+   "João Schmidt|suspenso",
    "Lucas Veríssimo",
-   "Gabriel Brazão",
-   "Vinícius Lira",
-   "Escobar",
    "Willian Arão",
-   "Arthur"
+   "Gabriel Brazão",
+   "Vinícius Lira"
   ],
   "SAO": [
+   "Sabino|suspenso",
    "Marcos Antônio",
    "Artur",
    "Ferreirinha",
@@ -281,13 +290,13 @@
   ],
   "VAS": [
    "Andrés Gómez",
+   "Cuesta",
    "Barros",
-   "Cuesta"
+   "Mateus Carvalho"
   ],
   "VIT": [
    "Luan Cândido|suspenso",
    "Marinho|suspenso",
-   "Baralhas",
    "Ramon",
    "Dudu",
    "Fabiano Souza",
