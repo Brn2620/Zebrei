@@ -1,5 +1,5 @@
 {
- "atualizado": "30/10/2026",
+ "atualizado": "31/10/2026",
  "jogos": {
   "BAH-FLA": {
    "gh": 0,
@@ -60,6 +60,11 @@
    "gh": 2,
    "ga": 1,
    "data": "24/10"
+  },
+  "COR-MIR": {
+   "gh": 2,
+   "ga": 0,
+   "data": "30/10"
   },
   "COR-VIT": {
    "gh": 1,
@@ -206,6 +211,7 @@
    "Ruan Tressoldi",
    "Fred",
    "Cassierra",
+   "Cuello",
    "Thiago Borbas"
   ],
   "CAP": [
@@ -221,7 +227,7 @@
    "Heitor"
   ],
   "COR": [
-   "Lingard|suspenso",
+   "Matheuzinho|suspenso",
    "Memphis Depay",
    "Gabriel Paulista",
    "Raniele",
@@ -231,6 +237,7 @@
   "CRU": [
    "Matheus Pereira|suspenso",
    "William|suspenso",
+   "Lucas Villalba|suspenso",
    "Sinisterra",
    "Gabriel Pec",
    "Felipe Morais",
@@ -239,6 +246,8 @@
   "FLA": [
    "Gonzalo Plata|suspenso",
    "Danilo",
+   "Saúl",
+   "Anthony Valencia",
    "Evertton Araújo"
   ],
   "FLU": [
@@ -258,9 +267,13 @@
   "INT": [
    "Rochet",
    "Sanabria",
-   "Kayky"
+   "Kayky",
+   "Alan Patrick",
+   "Thiago Maia"
   ],
-  "MIR": [],
+  "MIR": [
+   "Bruno Santos|suspenso"
+  ],
   "PAL": [
    "Ramón Sosa",
    "Paulinho",
@@ -270,7 +283,10 @@
    "Rodriguinho",
    "Davi Gomes"
   ],
-  "REM": [],
+  "REM": [
+   "Matheus Felipe",
+   "Gabriel Poveda"
+  ],
   "SAN": [
    "Neymar|suspenso",
    "João Schmidt|suspenso",
@@ -291,12 +307,14 @@
   "VAS": [
    "Andrés Gómez",
    "Cuesta",
-   "Barros",
+   "Cauan Barros",
    "Mateus Carvalho"
   ],
   "VIT": [
    "Luan Cândido|suspenso",
    "Marinho|suspenso",
+   "Jamerson",
+   "Mateus Silva",
    "Ramon",
    "Dudu",
    "Fabiano Souza",
