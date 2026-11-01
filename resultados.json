@@ -1,5 +1,5 @@
 {
- "atualizado": "31/10/2026",
+ "atualizado": "01/11/2026",
  "jogos": {
   "BAH-FLA": {
    "gh": 0,
@@ -50,6 +50,11 @@
    "gh": 0,
    "ga": 1,
    "data": "26/10"
+  },
+  "CFC-VIT": {
+   "gh": 2,
+   "ga": 0,
+   "data": "31/10"
   },
   "CHA-CAP": {
    "gh": 1,
@@ -311,14 +316,13 @@
    "Mateus Carvalho"
   ],
   "VIT": [
-   "Luan Cândido|suspenso",
-   "Marinho|suspenso",
-   "Jamerson",
    "Mateus Silva",
    "Ramon",
    "Dudu",
    "Fabiano Souza",
-   "Nathan Mendes"
+   "Nathan Mendes",
+   "Edu",
+   "Camutanga"
   ]
  },
  "tecnicos": {
